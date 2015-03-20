@@ -1,20 +1,10 @@
+[![Build Status](https://travis-ci.org/TStrothjohann/todo_challenge.svg)](https://travis-ci.org/TStrothjohann/todo_challenge)
+
 # Todo Challenge
-
-* Deadline: submit completed pull request by 9am on Monday
-* You may use whatever level of JavaScript you feel comfortable with - pure JS, jQuery, Angular, or whatever weird and wonderful framework you want to try. Extra points for DogeScript
-
-Steps
--------
-
-1. Fill out your learning plan self review for the week: https://github.com/makersacademy/learning_plan 
-2. Fork this repo, and clone to your local machine
-3. Complete the following challenge:
-
-## Challenge
 
 ![Todo mockup](https://makersacademy.mybalsamiq.com/mockups/2914603.png?key=afabb09aef2901a2732515ae4349c1ec0458294b)
 
-Build a Todo list as a mini front-end application. You don't have to use a database, the front-end is more important - you can use an appropriate data structure stored somewhere in your JavaScript (this time only!)
+A Todo list as a mini front-end application. You don't have to use a database, the front-end is more important - you can use an appropriate data structure stored somewhere in your JavaScript (this time only!)
 
 Here are the core user stories:
 
