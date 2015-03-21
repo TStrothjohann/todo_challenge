@@ -6,10 +6,33 @@
   <script type="text/javascript" src="bower_components/angular/angular.js"></script>
   <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
   <script type="text/javascript" src="js/angularApp.js"></script>
-  <script type="text/javascript" src="js/controllers/controllers.js"></script>
+  <script type="text/javascript" src="controllers/list.js"></script>
 </head>
 <body>
-  <h1>Todo for you</h1>
-  <div ng-controller="TodoController"></div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1 class="text-center">Todo for you</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div ng-controller="ListController as list" class="col-md-6 col-md-offset-3">
+        <div class="input-group">
+          <input type="text" ng-model="newtodo" class="form-control" placeholder="What do you have to do?" aria-describedby="addtodo">
+          <span class="input-group-btn">
+           <button class="btn btn-default" type="button" id="addtodo" ng-click="list.addTodo()">
+            Add
+           </button>
+          </span>
+        </div>
+        
+      <ul class="list-group">
+        <li class="list-group-item" ng-repeat= "todo in list.todos">
+          {{ todo.text }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 </body>
 </html>
