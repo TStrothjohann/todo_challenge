@@ -11,7 +11,7 @@ var ListController = function($scope) {
   ];
 
   this.addTodo = function(){
-
+    console.log("hurray");
 
     // $scope.todos.push(todo) 
   };
@@ -19,4 +19,6 @@ var ListController = function($scope) {
 
 angular
   .module('TodoList')
-  .controller('ListController', ListController) 
+  .controller('ListController', ListController)
+    
+  

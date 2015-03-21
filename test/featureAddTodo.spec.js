@@ -9,10 +9,9 @@ describe('The User', function() {
 
   it('can create a todo', function(){
     browser.get('http://localhost:3000/');
-    element(by.model('todoInput')).sendKeys("My first ToDo");
-    element(by.id('addtodo')).Click();
-    expect(element(by.binding('todo'))).toEqual("My first ToDo");
-
+    element(by.model('newtodo')).sendKeys("My first ToDo");
+    element(by.id('addtodo')).click();
+    expect(element(by.binding('todo.text')).getText()).toEqual("My first ToDo");
   });
 
 });
