@@ -1,6 +1,12 @@
-var ToDo = function(input){
-  this.text = input;
-  this.done = false;
+var ToDo = function(){
+  var TodoFactory = {};
+
+  TodoFactory.text = null;
+  TodoFactory.done = false;
+  TodoFactory.markAsDone = function() {
+    TodoFactory.done = true;
+  };
+  return TodoFactory;
 };
 
 

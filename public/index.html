@@ -3,10 +3,13 @@
 <head>
   <title>Todo List</title>
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
   <script type="text/javascript" src="bower_components/angular/angular.js"></script>
   <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
   <script type="text/javascript" src="js/angularApp.js"></script>
+  <script type="text/javascript" src="controllers/todo.js"></script>
   <script type="text/javascript" src="controllers/list.js"></script>
+
 </head>
 <body>
 <div class="container-fluid">
@@ -16,21 +19,31 @@
     </div>
   </div>
   <div class="row">
-    <div ng-controller="ListController as list" class="col-md-6 col-md-offset-3">
-        <div class="input-group">
-          <input type="text" ng-model="newtodo" class="form-control" placeholder="What do you have to do?" aria-describedby="addtodo">
+    <div ng-controller="ListController" class="col-md-6 col-md-offset-3">
+        <div class="input-group" id="todo-input">
+          <input type="text" ng-model="newToDo" class="form-control" placeholder="What do you have to do?" aria-describedby="addtodo">
           <span class="input-group-btn">
-           <button class="btn btn-default" type="button" id="addtodo" ng-click="list.addTodo()">
+           <button class="btn btn-default" type="button" id="addtodo" ng-click="addTodo()">
             Add
            </button>
           </span>
         </div>
         
-      <ul class="list-group">
-        <li class="list-group-item" ng-repeat= "todo in list.todos">
-          {{ todo.text }}
+      <div class="list-group">
+        <li class="list-group-item" ng-repeat="todo in todos">
+          <button type="button" class="close delete-todo" ng-click="deleteTodo($index)" aria-label="Close">
+              <span>&times;</span>
+          </button>
+          <div class="checkbox todo-item">
+          <label>
+            <input type="checkbox" id="mark-as-done" ng-click="markAsDone()">
+            <p class="todo-text">{{ todo.text }}</p>
+          </label>
+
+          </div>
+
         </li>
-      </ul>
+      </div>
     </div>
   </div>
 </div>

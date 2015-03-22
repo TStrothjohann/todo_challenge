@@ -1,24 +1,23 @@
-var ListController = function($scope) {
-  this.todos = [
-    {"id": 1,
-     'text': 'My first ToDo',
-     'done': false
-   },
-    {"id": 2,
-     'text': 'My second ToDo',
-     'done': false
-   },
-  ];
+var ListController = function($scope, ToDo) {
+  $scope.todos = [];
+  $scope.newToDo = null;
 
-  this.addTodo = function(){
-    console.log("hurray");
+  $scope.addTodo = function(){
 
-    // $scope.todos.push(todo) 
+    var newi = function(){new ToDo};
+    newi.text = $scope.newToDo
+    $scope.todos.push(newi);
+    $scope.newToDo = null;
+  };
+
+  $scope.deleteTodo = function(index){
+    $scope.todos.splice(index,1);
   };
 };
+
+
+
 
 angular
   .module('TodoList')
   .controller('ListController', ListController)
-    
-  

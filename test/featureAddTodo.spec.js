@@ -12,15 +12,16 @@ describe('The User', function() {
   });
 
   it('can create a todo', function(){
-    element(by.model('newtodo')).sendKeys("My first ToDo");
+    element(by.model('newToDo')).sendKeys("My first ToDo");
     element(by.id('addtodo')).click();
-    expect(element(by.binding('todo.text')).getText()).toEqual("My first ToDo");
+    expect(element.all(by.css('.todo-text')).last().getText()).toEqual("My first ToDo");
   });
 
-  it('can mark a todo as done', function() {
-    element(by.model('newtodo')).sendKeys("This will be done");
-    element(by.model('markAsDone')).click();
-    expect(element(by.binding('todo.status'))).toEqual(true);
+  it('can delete a todo', function() {
+    element(by.model('newToDo')).sendKeys("This will be deleted");
+    element(by.id('addtodo')).click();
+    element(by.css('.delete-todo')).click();
+    expect(element.all(by.binding('todo.text')).count()).toEqual(0);
   });
 
 });

@@ -2,8 +2,8 @@
   "name": "todo_challenge",
   "version": "0.0.0",
   "description": "A simple todo list based on AngularJS.",
-  "author": "Thomas Strothjohann <thomas@strothjohann.net>"
-  "private": true,
+  "author": "Thomas Strothjohann <thomas@strothjohann.net>",
+  "private": false,
   "scripts": {
     "start": "node ./bin/www"
   },

@@ -1,14 +1,22 @@
 describe('A ToDo', function(){
 
-  it('has a text', function(){
-    var firstToDo = new ToDo("This is a toDo");
-    expect(firstToDo.text).toEqual("This is a toDo");
+var firstToDo;
+
+  beforeEach(function() {
+    firstToDo = new ToDo;
+  });
+
+
+  it('can have a text', function(){
+    expect(firstToDo.text).toBeDefined;
   });
 
   it('has is undone when created', function(){
-    var firstToDo = new ToDo("This is a toDo");
     expect(firstToDo.done).toEqual(false);
   });
 
-
+  it('can be done', function() {
+    firstToDo.markAsDone();
+    expect(firstToDo.done).toEqual(true);
+  });
 });
