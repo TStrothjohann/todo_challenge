@@ -24,8 +24,11 @@ describe('The User', function() {
     expect(element.all(by.binding('todo.text')).count()).toEqual(0);
   });
 
-  it("can use Enter-key to save a todo", function(){
-    element()
+  it("can mark ToDos as done", function(){
+    element(by.model('newToDo')).sendKeys("My first ToDo");
+    element(by.id('addtodo')).click();
+    element(by.css('.mark-as-done')).click();
+    expect(element.all(by.css('.list-group-item')).last().getAttribute('class')).toMatch(/disabled/);
   });
 
 });
