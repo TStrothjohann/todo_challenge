@@ -1,12 +1,12 @@
 var ToDo = function(){
-  var TodoFactory = {};
-
-  TodoFactory.text = null;
-  TodoFactory.done = false;
-  TodoFactory.markAsDone = function() {
-    TodoFactory.done = true;
+  var TodoConstructor = function(input){
+    this.text = input;
+    this.done = false;
+    this.markAsDone = function() {
+      this.done = true;
+    };
   };
-  return TodoFactory;
+  return TodoConstructor;
 };
 
 angular
