@@ -22,7 +22,7 @@ var firstToDo;
   });
 
   it('can be done', function() {
-    firstToDo.markAsDone();
+    firstToDo.switchDone();
     expect(firstToDo.done).toEqual(true);
   });
 });

@@ -2,8 +2,15 @@ var ToDo = function(){
   var TodoConstructor = function(input){
     this.text = input;
     this.done = false;
-    this.markAsDone = function() {
-      this.done = true;
+    this.switchDone = function() {
+      switch(this.done){
+      case true:
+        this.done = false;
+        break;
+      case false:
+        this.done = true;
+        break;
+      }   
     };
   };
   return TodoConstructor;
