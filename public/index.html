@@ -8,8 +8,8 @@
   <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
   <script type="text/javascript" src="js/angularApp.js"></script>
   <script type="text/javascript" src="controllers/todo.js"></script>
+  <script type="text/javascript" src="js/helper.js"></script>
   <script type="text/javascript" src="controllers/list.js"></script>
-
 </head>
 <body>
 <div class="container-fluid">
@@ -28,7 +28,6 @@
            </button>
           </span>
         </div>
-        
       <div class="list-group">
         <li class="list-group-item" ng-repeat="todo in todos">
           <button type="button" class="close delete-todo" ng-click="deleteTodo($index)" aria-label="Close">
@@ -36,12 +35,10 @@
           </button>
           <div class="checkbox todo-item">
           <label>
-            <input type="checkbox" id="mark-as-done" ng-click="markAsDone()">
+            <input type="checkbox" id="mark-as-done" ng-click="switchDone($index)">
             <p class="todo-text">{{ todo.text }}</p>
           </label>
-
           </div>
-
         </li>
       </div>
     </div>

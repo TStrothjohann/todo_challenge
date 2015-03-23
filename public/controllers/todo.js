@@ -9,9 +9,6 @@ var ToDo = function(){
   return TodoFactory;
 };
 
-
-
-
 angular
   .module('TodoList')
   .factory('ToDo', ToDo);

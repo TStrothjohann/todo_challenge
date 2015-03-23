@@ -6,7 +6,6 @@ var firstToDo;
     firstToDo = new ToDo;
   });
 
-
   it('can have a text', function(){
     expect(firstToDo.text).toBeDefined;
   });
