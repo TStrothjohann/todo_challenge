@@ -19,14 +19,16 @@
   </div>
   <div class="row">
     <div ng-controller="ListController" class="col-md-6 col-md-offset-3">
-        <div class="input-group" id="todo-input">
+        <form class="input-group" id="todo-input">
+          
           <input type="text" ng-model="newToDo" class="form-control" placeholder="What do you have to do?" aria-describedby="addtodo">
           <span class="input-group-btn">
-           <button class="btn btn-default" type="button" id="addtodo" ng-click="addTodo()">
+           <button class="btn btn-default" type="submit" id="addtodo" ng-click="addTodo()">
             Add
            </button>
           </span>
-        </div>
+          
+        </form>
       <div class="list-group">
         <li class="list-group-item" ng-repeat="todo in todos">
           <button type="button" class="close delete-todo" ng-click="deleteTodo($index)" aria-label="Close">

@@ -24,5 +24,9 @@ describe('The User', function() {
     expect(element.all(by.binding('todo.text')).count()).toEqual(0);
   });
 
+  it("can use Enter-key to save a todo", function(){
+    element()
+  });
+
 });
 
