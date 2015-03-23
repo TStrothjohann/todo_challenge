@@ -3,8 +3,8 @@ var ListController = function($scope, ToDo) {
   $scope.newToDo = null;
 
   $scope.addTodo = function(){
-    var newi = function(){new(ToDo)};
-    newi.text = $scope.newToDo
+    var newItem = function(){new(ToDo)};
+    newItem.text = $scope.newToDo
     $scope.todos.push(newi);
     $scope.newToDo = null;
   };

@@ -23,6 +23,5 @@ describe('The User', function() {
     element(by.css('.delete-todo')).click();
     expect(element.all(by.binding('todo.text')).count()).toEqual(0);
   });
-
 });
 

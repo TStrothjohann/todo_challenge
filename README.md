@@ -1,10 +1,23 @@
 [![Build Status](https://travis-ci.org/TStrothjohann/todo_challenge.svg)](https://travis-ci.org/TStrothjohann/todo_challenge)
 
-# Todo Challenge
+# AngularJS Todo List
 
-![Todo mockup](https://makersacademy.mybalsamiq.com/mockups/2914603.png?key=afabb09aef2901a2732515ae4349c1ec0458294b)
+This is Todo list front-end application. It has no state. After reloading the page, the todos are gone.
 
-A Todo list as a mini front-end application. You don't have to use a database, the front-end is more important - you can use an appropriate data structure stored somewhere in your JavaScript (this time only!)
+Done:
+- The user can add and delete ToDos.
+- The ToDo-List consists of a controller and a ToDo-item-Factory.
+
+
+ToBeDone:
+- HTML could be more expressive. I want to research how to split the page into several html-partials.
+
+- A ToDo can be marked as done. The model will change to done = true. But I haven't implemented a view change yet. Reordering the list and aplying another css-class would be nice.
+
+- I want to capture the return-key to save a ToDo.
+
+- I'm not so sure if a factory was the best way to encapsulate the ToDo-item creation. Had issues creating a todo with the text as argument. 
+
 
 Here are the core user stories:
 
@@ -38,19 +51,9 @@ I want to be able to clear my completed tasks
 So I never see them again
 ```
 
-As you may imagine, implementing a To-do list is very much a solved problem. However, we are mainly interested in seeing how you approach testing and design. We are looking for:
-
-* well written, well structured acceptance and unit tests
-* clear and expressive JavaScript
-* good HTML5 markup
-
-Don't worry about deployment, and make sure you read the CONTRIBUTING.md when submitting a pull request.
-
-## Extensions
+## Possible Extensions
 
 * Deploy the app
 * Create a persistance layer (e.g. MongoDB), or use LocalStorage or the filesystem through Node
 * Make it look purdy (CSS) - try a framework like Bootstrap or Foundation
-
-Good luck!
 
