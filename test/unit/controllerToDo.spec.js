@@ -1,16 +1,23 @@
 describe('A ToDo', function(){
+beforeEach(module('TodoList'));
+
+beforeEach(function() {
+  inject(function($injector) {
+    todoFactory = $injector.get('ToDo');
+  });
+});
 
 var firstToDo;
 
   beforeEach(function() {
-    firstToDo = TodoConstructor("test todo");
+    firstToDo = new todoFactory("test todo");
   });
 
   it('has a text when created', function(){
     expect(firstToDo.text).toEqual("test todo");
   });
 
-  it('has is undone when created', function(){
+  it('is undone when created', function(){
     expect(firstToDo.done).toEqual(false);
   });
 
