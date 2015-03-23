@@ -15,9 +15,6 @@ var ListController = function($scope, ToDo) {
   };
 };
 
-
-
-
 angular
   .module('TodoList')
   .controller('ListController', ListController)

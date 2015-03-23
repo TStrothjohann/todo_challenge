@@ -9,7 +9,6 @@
   <script type="text/javascript" src="js/angularApp.js"></script>
   <script type="text/javascript" src="controllers/todo.js"></script>
   <script type="text/javascript" src="controllers/list.js"></script>
-
 </head>
 <body>
 <div class="container-fluid">
@@ -28,7 +27,6 @@
            </button>
           </span>
         </div>
-        
       <div class="list-group">
         <li class="list-group-item" ng-repeat="todo in todos">
           <button type="button" class="close delete-todo" ng-click="deleteTodo($index)" aria-label="Close">
@@ -39,9 +37,7 @@
             <input type="checkbox" id="mark-as-done" ng-click="markAsDone()">
             <p class="todo-text">{{ todo.text }}</p>
           </label>
-
           </div>
-
         </li>
       </div>
     </div>
