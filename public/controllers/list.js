@@ -1,6 +1,9 @@
 var ListController = function($scope, ToDo) {
   $scope.todos = [];
   $scope.newToDo = null;
+  $scope.filters = {
+    
+  };
 
   $scope.addTodo = function(){
     var newitem = new ToDo($scope.newToDo);

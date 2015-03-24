@@ -27,16 +27,22 @@
             Add
            </button>
           </span>
-          
         </form>
+        
+        <label>Filter out done
+          <input type="checkbox" ng-model="filters" ng-true-value="{done:false}" ng-false-value="{}">
+        </label>
+
+
+
       <div class="list-group">
-        <li class="list-group-item" ng-class="todo.done ? 'disabled' : 'todo'" ng-repeat="todo in todos">
+        <li class="list-group-item" ng-class="todo.done ? 'disabled' : 'todo'" ng-repeat="todo in todos | filter:filters">
           <button type="button" class="close delete-todo" ng-click="deleteTodo($index)" aria-label="Close">
               <span>&times;</span>
           </button>
           <div class="checkbox todo-item">
           <label>
-            <input type="checkbox" class="mark-as-done" ng-click="todo.switchDone(); " ng-model="done">
+            <input type="checkbox" class="mark-as-done" ng-click="todo.switchDone()">
             <p class="todo-text">{{ todo.text }}</p>
           </label>
           </div>
